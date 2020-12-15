@@ -34,6 +34,7 @@ namespace MedicalRepresentativeSchedule
             services.AddControllers();
             services.AddScoped<IRepScheduleRepository, RepScheduleRepository>();
             services.AddScoped<IRepScheduleProvider, RepScheduleProvider>();
+            services.AddScoped<IMedicineStockProvider, MedicineStockProvider>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1.0", new OpenApiInfo { Title = "RepSchedule", Version = "1.0" });
